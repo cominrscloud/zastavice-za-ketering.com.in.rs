@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reklamne zastavice za ketering i proslave | Vaš Logotip</title>
+    <meta name="description" content="Reklamne zastavice za burgere, piće i evente. Obostrana štampa, sterilni štapići, brza isporuka. Poruči odmah!">
+    
+    <style>
+        /* OSNOVNE POSTAVKE ZA BRZINU I IZGLED */
+        :root {
+            --primary: #111;
+            --accent: #ff3b30;
+            --whatsapp: #25d366;
+            --bg-light: #f8f9fa;
+            --text-main: #333;
+            --radius: 8px;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: #fff;
+            padding-bottom: 70px; /* Zbog sticky dugmeta */
+        }
+
+        h1, h2, h3 { color: var(--primary); line-height: 1.2; margin-bottom: 15px; }
+        p { margin-bottom: 15px; font-size: 1.1rem; }
+        img { max-width: 100%; height: auto; border-radius: var(--radius); display: block; }
+        
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 60px 0; }
+        .bg-light { background-color: var(--bg-light); }
+        .text-center { text-align: center; }
+        
+        /* DUGMAD */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 15px 30px; font-size: 1.1rem; font-weight: 700;
+            text-decoration: none; border-radius: 50px; transition: 0.3s;
+            cursor: pointer; border: none; text-align: center; width: 100%; max-width: 300px;
+        }
+        .btn-green { background-color: var(--whatsapp); color: #fff; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+        .btn-green:hover { background-color: #20bd5a; transform: translateY(-2px); }
+        .btn-dark { background-color: var(--primary); color: #fff; }
+        .btn-dark:hover { background-color: #333; }
+        
+        .btn-group { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
+
+        /* HERO SEKCIJA */
+        .hero { padding: 80px 0 60px; text-align: center; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; }
+        .hero h2 { font-size: 1.5rem; color: #555; font-weight: 500; margin-bottom: 30px; }
+        .hero ul { list-style: none; display: inline-block; text-align: left; margin-bottom: 30px; }
+        .hero ul li { font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+
+        /* VIZUELNI BLOK */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
+        .img-placeholder { background: #e9ecef; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; border-radius: var(--radius); color: #6c757d; font-weight: 600; border: 2px dashed #ced4da; }
+
+        /* KARTICE (BENEFITI I KORACI) */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .card { background: #fff; padding: 30px; border-radius: var(--radius); box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eaeaea; }
+        .card-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+
+        /* CENOVNIK */
+        .bestseller-badge { display: inline-block; background: var(--accent); color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; animation: pulse 2s infinite; }
+        .table-wrapper { overflow-x: auto; margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; min-width: 300px; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: var(--primary); color: #fff; font-weight: 600; }
+        tr:nth-child(even) { background-color: var(--bg-light); }
+        .price-highlight { font-weight: 700; color: var(--accent); font-size: 1.1rem; }
+        
+        /* STICKY CTA */
+        .sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; padding: 15px 20px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); text-align: center; z-index: 1000; display: flex; justify-content: center; }
+        .sticky-cta .btn { max-width: 400px; margin: 0; }
+
+        /* ANIMACIJE */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero h2 { font-size: 1.2rem; }
+            .section { padding: 40px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Reklamne zastavice za ketering i proslave – sa vašim logotipom</h1>
+            <h2>Idealno za burgere, piće, evente i brendiranje vašeg biznisa</h2>
+            
+            <ul>
+                <li>✔️ Minimalno 500 komada</li>
+                <li>✔️ Obostrana kolorna štampa</li>
+                <li>✔️ Brza izrada i isporuka</li>
+            </ul>
+
+            <div class="btn-group">
+                <a href="tel:+381637683881" class="btn btn-green">📞 Pozovi: 063 768 3881</a>
+                <a href="mailto:info@com.in.rs" class="btn btn-dark">🟢 Pošalji upit odmah</a>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">Dostupni smo i na Viberu i WhatsApp-u.</p>
+        </div>
+    </header>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h3 class="text-center">Pogledajte kako izgleda u praksi</h3>
+            <div class="gallery">
+                <div class="img-placeholder">Slika: Burger sa zastavicom</div>
+                <div class="img-placeholder">Slika: Piće/Koktel sa štapićem</div>
+                <div class="img-placeholder">Slika: Ketering/Event postavka</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container text-center">
+            <h2>Šta dobijate?</h2>
+            <p>Zastavice sa vašim logotipom ili logotipom vašeg klijenta. Bez filozofije.</p>
+            <br>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-icon">🎯</span>
+                    <h3>Savršeno za</h3>
+                    <p>Ketering, rođendane, fast food, koktele i razne evente.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🖨️</span>
+                    <h3>Vrhunska štampa</h3>
+                    <p>Obostrana kolorna štampa za maksimalnu vidljivost vašeg brenda.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🛡️</span>
+                    <h3>100% Bezbedno</h3>
+                    <p>Sterilni štapići, potpuno bezbedni za direktan kontakt sa hranom i pićem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light" id="cene">
+        <div class="container">
+            <h2 class="text-center">Dimenzije, Opcije i Cene</h2>
+            <p class="text-center" style="margin-bottom: 40px;">Štampa za sve opcije: <strong>25x35mm</strong> (rasklop 25x70mm). Obostrani kolor.</p>
+
+            <h3>1. Zastavice na standardnoj čačkalici</h3>
+            <div class="table-wrapper">
+                <table>
+                    <tr><th>Količina</th><th>Cena po komadu</th></tr>
+                    <tr><td>500 – 1.000 kom</td><td class="price-highlight">12.5 din</td></tr>
+                    <tr><td>1.000 – 2.000 kom</td><td class="price-highlight">11.5 din</td></tr>
+                    <tr><td>2.000 – 7.000 kom</td><td class="price-highlight">11.0 din</td></tr>
+                    <tr><td>Preko 7.000 kom</td><td class="price-highlight">10.2 din</td></tr>
+                </table>
+            </div>
+
+            <div class="text-center">
+                <span class="bestseller-badge">🔥 Najčešći izbor</span>
+            </div>
+            <h3>2. Štapići 9cm (Idealno za burgere)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <tr><th>Količina</th><th>Cena po komadu</th></tr>
+                    <tr><td>500 – 1.000 kom</td><td class="price-highlight">14.5 din</td></tr>
+                    <tr><td>1.000 – 2.000 kom</td><td class="price-highlight">13.5 din</td></tr>
+                    <tr><td>2.000 – 7.000 kom</td><td class="price-highlight">13.0 din</td></tr>
+                    <tr><td>Preko 7.000 kom</td><td class="price-highlight">12.2 din</td></tr>
+                </table>
+            </div>
+
+            <h3>3. Štapići 20cm (Idealno za koktele i piće)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <tr><th>Količina</th><th>Cena po komadu</th></tr>
+                    <tr><td>500 – 1.000 kom</td><td class="price-highlight">15.7 din</td></tr>
+                    <tr><td>1.000 – 2.000 kom</td><td class="price-highlight">14.7 din</td></tr>
+                    <tr><td>2.000 – 7.000 kom</td><td class="price-highlight">14.2 din</td></tr>
+                    <tr><td>Preko 7.000 kom</td><td class="price-highlight">13.4 din</td></tr>
+                </table>
+            </div>
+            
+            <p style="font-size: 0.95rem; color: var(--accent); font-weight: bold;">⚠️ Napomena: Za tamnu/crnu pozadinu potrebno je naglasiti u porudžbini.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container text-center">
+            <h2>Kako se poručuje?</h2>
+            <p>U 3 jednostavna koraka do gotovog proizvoda:</p>
+            <br>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-icon">1️⃣</span>
+                    <h3>Pošaljite logo</h3>
+                    <p>Pošaljite nam logo ili tekst na Viber, WhatsApp ili Email.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">2️⃣</span>
+                    <h3>Priprema</h3>
+                    <p>Dobijate vizuelnu pripremu za štampu na odobrenje.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">3️⃣</span>
+                    <h3>Izrada</h3>
+                    <p>Kreće brza izrada i isporuka na vašu adresu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container text-center">
+            <h2>Imate pitanja ili želite da poručite?</h2>
+            <p>Radimo za keteringe, fast food-ove i event organizatore širom Srbije.</p>
+            
+            <div class="btn-group" style="margin-bottom: 50px;">
+                <a href="tel:+381637683881" class="btn btn-green">📞 Pozovi: 063 768 3881</a>
+                <a href="mailto:info@com.in.rs" class="btn btn-dark">✉️ Pošaljite upit na email</a>
+            </div>
+
+            <div style="text-align: left; max-width: 600px; margin: 0 auto; background: #fff; padding: 20px; border-radius: var(--radius); border: 1px solid #eaeaea;">
+                <h3 class="text-center">Česta pitanja</h3>
+                <p><strong>Koja je minimalna količina?</strong><br>Minimalna količina za poručivanje je 500 komada.</p>
+                <p><strong>Da li mogu da štampam tamnu pozadinu?</strong><br>Da, moguće je, samo obavezno to naglasite prilikom upita.</p>
+                <p><strong>Da li su štapići bezbedni?</strong><br>Apsolutno, koristimo isključivo sterilne štapiće predviđene za kontakt sa hranom.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="sticky-cta">
+        <a href="tel:+381637683881" class="btn btn-green" style="font-size: 1rem; padding: 12px 20px;">📞 Naruči odmah (Viber / WA)</a>
+    </div>
+
+</body>
+</html>
