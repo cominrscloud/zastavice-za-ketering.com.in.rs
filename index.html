@@ -3,85 +3,461 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reklamne zastavice za ketering</title>
+<title>Zastavice za Ketering | Reklamne čačkalice i štapići sa vašim logom</title>
+<meta name="description" content="Reklamne zastavice za ketering, burgere i proslave. Obostrana kolorna štampa, sterilni štapići, minimum 500 kom. Poručite danas!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f5f5f5;color:#222}
-.container{max-width:1100px;margin:auto;padding:20px}
-.hero{background:#111;color:#fff;text-align:center;padding:60px 20px}
-.hero h1{font-size:36px;margin-bottom:10px}
-.hero p{font-size:18px;margin-bottom:20px}
-.btn{display:inline-block;padding:15px 25px;background:#25D366;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold}
-.section{padding:40px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#fff;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.1)}
-.price-table{width:100%;border-collapse:collapse}
-.price-table th,.price-table td{border:1px solid #ddd;padding:10px;text-align:center}
-.cta{background:#25D366;color:#fff;text-align:center;padding:40px}
-.sticky{position:fixed;bottom:10px;right:10px;background:#25D366;color:#fff;padding:15px;border-radius:50px;text-decoration:none;font-weight:bold}
+  :root {
+    --gold: #C8922A;
+    --gold-light: #E8B84B;
+    --gold-pale: #F7E8C8;
+    --dark: #1A1208;
+    --deep: #2D1F0A;
+    --cream: #FBF6EE;
+    --cream-dark: #F2E8D5;
+    --text: #3D2B10;
+    --text-light: #7A5C35;
+    --white: #FFFDF8;
+    --red-accent: #B83232;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,18,8,0.97); backdrop-filter: blur(12px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 6vw; height: 68px;
+    border-bottom: 1px solid rgba(200,146,42,0.25);
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--gold-light); text-decoration: none; }
+  .nav-logo span { color: #fff; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta { background: var(--gold); color: var(--dark) !important; font-weight: 700 !important; padding: 0.5rem 1.25rem; border-radius: 4px; }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  .hero {
+    min-height: 100vh; background: var(--dark);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position: relative; overflow: hidden; padding: 120px 6vw 80px; text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(200,146,42,0.13) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 20%, rgba(200,146,42,0.09) 0%, transparent 45%),
+                radial-gradient(ellipse at 55% 85%, rgba(200,146,42,0.07) 0%, transparent 40%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block; border: 1px solid rgba(200,146,42,0.5); color: var(--gold-light);
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 0.4rem 1.2rem; border-radius: 50px; margin-bottom: 1.5rem;
+    background: rgba(200,146,42,0.08); animation: fadeUp 0.6s ease both;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif; font-size: clamp(2.5rem,6vw,5.2rem);
+    font-weight: 900; line-height: 1.07; color: #fff; margin-bottom: 1rem;
+    animation: fadeUp 0.7s ease 0.1s both;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-size: clamp(1rem,2vw,1.2rem); color: rgba(255,255,255,0.62);
+    max-width: 560px; line-height: 1.75; margin: 0 auto 2.5rem;
+    animation: fadeUp 0.7s ease 0.2s both;
+  }
+  .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.7s ease 0.3s both; }
+  .btn-primary {
+    background: var(--gold); color: var(--dark);
+    padding: 0.9rem 2.2rem; border-radius: 6px; font-weight: 700; font-size: 1rem;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(200,146,42,0.35);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200,146,42,0.5); }
+  .btn-secondary {
+    background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.3);
+    padding: 0.9rem 2rem; border-radius: 6px; font-weight: 500; font-size: 1rem;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold-light); }
+  .hero-stats {
+    display: flex; gap: 3rem; justify-content: center; margin-top: 4rem;
+    padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap;
+    animation: fadeUp 0.7s ease 0.4s both;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700; color: var(--gold-light); display: block; }
+  .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+
+  section { padding: 96px 6vw; }
+  .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: block; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem,4vw,3rem); font-weight: 700; line-height: 1.2; color: var(--dark); margin-bottom: 1rem; }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-body { font-size: 1.05rem; line-height: 1.75; color: var(--text-light); max-width: 600px; }
+
+  /* FEATURES */
+  .features { background: var(--white); }
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin-top: 3.5rem; }
+  .feature-card {
+    background: var(--cream); border: 1px solid rgba(200,146,42,0.15);
+    border-radius: 12px; padding: 2rem 1.75rem; position: relative; overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(200,146,42,0.12); }
+  .feature-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+  .feature-icon { width:52px; height:52px; border-radius:10px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:1.25rem; box-shadow:0 4px 16px rgba(200,146,42,0.3); }
+  .feature-card h3 { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; color:var(--dark); margin-bottom:0.6rem; }
+  .feature-card p { font-size:0.9rem; color:var(--text-light); line-height:1.7; }
+
+  /* PRODUCTS */
+  .products { background: var(--cream-dark); }
+  .products-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem; }
+  .product-specs { background: var(--dark); border-radius: 16px; padding: 2rem; color: #fff; }
+  .spec-row { display:flex; justify-content:space-between; align-items:center; padding:0.85rem 0; border-bottom:1px solid rgba(255,255,255,0.08); font-size:0.9rem; }
+  .spec-row:last-child { border-bottom:none; }
+  .spec-label { color:rgba(255,255,255,0.5); }
+  .spec-value { color:var(--gold-light); font-weight:600; }
+  .products-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  .product-card { background: var(--white); border-radius: 14px; overflow: hidden; border: 1px solid rgba(200,146,42,0.12); transition: transform 0.25s, box-shadow 0.25s; }
+  .product-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+  .product-card-header { background: var(--dark); padding: 1.75rem 1.5rem 2.5rem; position: relative; }
+  .product-card-header::after { content:''; position:absolute; bottom:-1px; left:0; right:0; height:24px; background:var(--white); clip-path:ellipse(55% 100% at 50% 100%); }
+  .product-size-badge { display:inline-block; background:rgba(200,146,42,0.18); border:1px solid rgba(200,146,42,0.4); color:var(--gold-light); font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:0.75rem; }
+  .product-name { font-family:'Playfair Display',serif; font-size:1.35rem; color:#fff; font-weight:700; line-height:1.25; }
+  .product-card-body { padding: 1.5rem; }
+  .product-desc { font-size:0.875rem; color:var(--text-light); line-height:1.65; margin-bottom:1rem; }
+  .product-from { font-size:0.72rem; color:var(--text-light); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.2rem; }
+  .product-price { font-family:'Playfair Display',serif; font-size:1.9rem; color:var(--gold); font-weight:700; }
+  .product-price span { font-size:0.9rem; color:var(--text-light); font-family:'DM Sans',sans-serif; font-weight:400; }
+
+  /* PRICING */
+  .pricing { background: var(--white); }
+  .pricing-note { background:linear-gradient(135deg,#FFF3CD,#FFE8A3); border:1px solid #E8C84A; border-radius:10px; padding:1rem 1.5rem; font-size:0.9rem; color:#7A5500; margin-bottom:2.5rem; display:flex; gap:0.75rem; align-items:flex-start; max-width:700px; }
+  .pricing-tables { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+  .pricing-table { border-radius:14px; overflow:hidden; border:1px solid rgba(200,146,42,0.15); }
+  .pricing-table-header { background:var(--dark); padding:1.5rem; text-align:center; }
+  .pricing-table-title { font-family:'Playfair Display',serif; font-size:1.05rem; color:#fff; font-weight:700; margin-bottom:0.25rem; }
+  .pricing-table-sub { font-size:0.75rem; color:rgba(255,255,255,0.4); }
+  .pricing-row { display:grid; grid-template-columns:1fr auto; padding:0.85rem 1.25rem; gap:1rem; align-items:center; border-bottom:1px solid rgba(200,146,42,0.08); font-size:0.875rem; background:var(--cream); position:relative; }
+  .pricing-row:last-child { border-bottom:none; }
+  .pricing-row:nth-child(even) { background:var(--white); }
+  .pricing-row-qty { color:var(--text-light); }
+  .pricing-row-price { font-weight:700; color:var(--gold); white-space:nowrap; font-size:1rem; }
+  .pricing-row.best { background:rgba(200,146,42,0.06); }
+  .best-tag { position:absolute; right:1rem; top:50%; transform:translateY(-50%); background:var(--gold); color:var(--dark); font-size:0.6rem; font-weight:700; letter-spacing:0.08em; padding:0.15rem 0.45rem; border-radius:3px; text-transform:uppercase; }
+
+  /* HOW */
+  .how { background: var(--dark); }
+  .how .section-title { color:#fff; }
+  .how .section-body { color:rgba(255,255,255,0.5); }
+  .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; margin-top:3.5rem; }
+  .step-num { font-family:'Playfair Display',serif; font-size:4rem; font-weight:900; color:rgba(200,146,42,0.15); line-height:1; margin-bottom:-1rem; display:block; }
+  .step-icon { width:52px; height:52px; background:rgba(200,146,42,0.15); border:1.5px solid rgba(200,146,42,0.35); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1rem; }
+  .step h3 { font-family:'Playfair Display',serif; font-size:1.05rem; color:#fff; margin-bottom:0.5rem; }
+  .step p { font-size:0.875rem; color:rgba(255,255,255,0.45); line-height:1.7; }
+
+  /* NOTICE */
+  .notice { background:var(--cream-dark); }
+  .notice-box { background:var(--white); border-left:4px solid var(--gold); border-radius:0 10px 10px 0; padding:1.5rem 2rem; max-width:700px; font-size:0.95rem; line-height:1.75; color:var(--text); }
+  .notice-box strong { color:var(--red-accent); }
+
+  /* CONTACT */
+  .contact { background:var(--dark); text-align:center; }
+  .contact .section-title { color:#fff; }
+  .contact .section-body { color:rgba(255,255,255,0.5); margin:0 auto 3rem; }
+  .contact-cards { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-bottom:2.5rem; }
+  .contact-card { background:rgba(255,255,255,0.05); border:1px solid rgba(200,146,42,0.2); border-radius:14px; padding:1.75rem 2rem; min-width:200px; text-align:center; text-decoration:none; color:#fff; transition:background 0.2s, border-color 0.2s, transform 0.2s; }
+  .contact-card:hover { background:rgba(200,146,42,0.1); border-color:var(--gold); transform:translateY(-4px); }
+  .contact-card-icon { font-size:2rem; margin-bottom:0.75rem; display:block; }
+  .contact-card-label { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-light); margin-bottom:0.4rem; }
+  .contact-card-value { font-size:1rem; font-weight:600; }
+  .contact-hint { font-size:0.875rem; color:rgba(255,255,255,0.3); margin-top:2rem; }
+
+  footer { background:#0E0A04; padding:2rem 6vw; display:flex; align-items:center; justify-content:space-between; border-top:1px solid rgba(200,146,42,0.1); flex-wrap:wrap; gap:1rem; }
+  .footer-logo { font-family:'Playfair Display',serif; font-size:1rem; color:var(--gold-light); font-weight:700; }
+  footer p { font-size:0.8rem; color:rgba(255,255,255,0.25); }
+
+  .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity:1; transform:none; }
+
+  @media (max-width:900px) {
+    .products-intro { grid-template-columns:1fr; }
+    .products-cards { grid-template-columns:1fr; }
+    .pricing-tables { grid-template-columns:1fr; }
+    .steps { grid-template-columns:1fr 1fr; }
+    .nav-links { display:none; }
+  }
+  @media (max-width:600px) {
+    .steps { grid-template-columns:1fr; }
+    .hero-stats { gap:1.5rem; }
+    section { padding:64px 5vw; }
+  }
 </style>
 </head>
 <body>
 
-<div class="hero">
-<h1>Reklamne zastavice za ketering</h1>
-<p>Zastavice sa vašim logotipom za burgere, piće i evente</p>
-<a href="tel:0637683881" class="btn">Pozovi odmah</a>
-</div>
+<nav>
+  <a class="nav-logo" href="#"><span>Zastavice</span> za Ketering</a>
+  <ul class="nav-links">
+    <li><a href="#proizvodi">Proizvodi</a></li>
+    <li><a href="#cene">Cene</a></li>
+    <li><a href="#kako">Kako naručiti</a></li>
+    <li><a href="#kontakt" class="nav-cta">Pošaljite upit</a></li>
+  </ul>
+</nav>
 
-<div class="container section">
-<h2>Zašto izabrati naše zastavice?</h2>
-<div class="grid">
-<div class="card">Brendiranje vašeg proizvoda</div>
-<div class="card">Idealno za evente i ketering</div>
-<div class="card">Bezbedno za hranu</div>
-</div>
-</div>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-badge">🏳️ Reklamne zastavice po narudžbini</div>
+  <h1>Vaš logo na svakom<br><em>zalogaju</em></h1>
+  <p class="hero-sub">Profesionalne reklamne zastavice za ketering, burgere i proslave — obostrana kolorna štampa, sterilni štapići, od 500 komada.</p>
+  <div class="hero-actions">
+    <a href="#kontakt" class="btn-primary">📩 Pošaljite upit</a>
+    <a href="#cene" class="btn-secondary">Pogledajte cene →</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Min. narudžbina</span></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">Vrste štapića</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Kolorna štampa</span></div>
+    <div class="stat"><span class="stat-num">2×</span><span class="stat-label">Obostrana štampa</span></div>
+  </div>
+</section>
 
-<div class="container section">
-<h2>Opcije</h2>
-<ul>
-<li>Standardne čačkalice</li>
-<li>Štapići 9cm (burgers)</li>
-<li>Štapići 20cm (kokteli)</li>
-</ul>
-</div>
+<section class="features" id="prednosti">
+  <div class="reveal">
+    <span class="section-label">Zašto nas izabrati</span>
+    <h2 class="section-title">Kvalitet koji se vidi —<br><em>i oseća</em></h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <div class="feature-icon">🎨</div>
+      <h3>Obostrana kolorna štampa</h3>
+      <p>Vaš logo izgleda sjajno sa obe strane zastavice. Dimenzija 25×35mm, rasklop 25×70mm — savršeno za brendiranje.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🧪</div>
+      <h3>Sterilni štapići — sigurni za hranu</h3>
+      <p>Svi štapići i čačkalice su sterilni i potpuno sigurni za upotrebu u direktnom kontaktu sa hranom i pićem.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">🏢</div>
+      <h3>Vaš ili klijentov logo</h3>
+      <p>Odlično za ketering kompanije, restorane i event agencije — štampamo vaš logo ili logo vašeg klijenta.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">📦</div>
+      <h3>Tri vrste štapića</h3>
+      <p>Standardna čačkalica, drveni štapić 9cm za burgere i štapić 20cm za mešanje koktela — sve u jednoj ponudi.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">💰</div>
+      <h3>Cena pada sa količinom</h3>
+      <p>Što više naručite, to je cena po komadu niža. Pogledajte cenovnik i izaberite količinu koja vam odgovara.</p>
+    </div>
+    <div class="feature-card reveal">
+      <div class="feature-icon">⚡</div>
+      <h3>Brz i jednostavan upit</h3>
+      <p>Kontaktirajte nas putem telefona, Viber-a, WhatsApp-a — odgovaramo brzo sa konkretnom ponudom.</p>
+    </div>
+  </div>
+</section>
 
-<div class="container section">
-<h2>Cenovnik</h2>
-<h3>Čačkalice</h3>
-<table class="price-table">
-<tr><th>Količina</th><th>Cena</th></tr>
-<tr><td>500–1000</td><td>12.5 din</td></tr>
-<tr><td>1000–2000</td><td>11.5 din</td></tr>
-<tr><td>2000–7000</td><td>11 din</td></tr>
-<tr><td>7000+</td><td>10.2 din</td></tr>
-</table>
+<section class="products" id="proizvodi">
+  <div class="products-intro reveal">
+    <div>
+      <span class="section-label">Naši proizvodi</span>
+      <h2 class="section-title">Zastavice za svaku<br><em>prigodu</em></h2>
+      <p class="section-body" style="margin-bottom:1.5rem;">Nudimo zastavice na tri vrste štapića — za proslave, ketering, burgere i koktel žurke. Sve se izrađuju po vašoj narudžbini.</p>
+      <p class="section-body">Čačkalice zastavice za burgere mogu se, osim na standardnoj čačkalici, napraviti i na dužem drvenom štapiću od 9cm ili na štapiću za mešanje koktela dužine 20cm.</p>
+    </div>
+    <div class="product-specs">
+      <div class="spec-row"><span class="spec-label">Dimenzija zastavice</span><span class="spec-value">25 × 35 mm</span></div>
+      <div class="spec-row"><span class="spec-label">Rasklop (pre savijanja)</span><span class="spec-value">25 × 70 mm</span></div>
+      <div class="spec-row"><span class="spec-label">Vrsta štampe</span><span class="spec-value">Obostrana kolorna</span></div>
+      <div class="spec-row"><span class="spec-label">Bezbednost štapića</span><span class="spec-value">Sterilni ✓</span></div>
+      <div class="spec-row"><span class="spec-label">Minimalna narudžbina</span><span class="spec-value">500 komada</span></div>
+      <div class="spec-row"><span class="spec-label">Logo</span><span class="spec-value">Vaš ili klijentov</span></div>
+    </div>
+  </div>
 
-<h3>9cm</h3>
-<table class="price-table">
-<tr><th>Količina</th><th>Cena</th></tr>
-<tr><td>500–1000</td><td>14.5 din</td></tr>
-<tr><td>1000–2000</td><td>13.5 din</td></tr>
-<tr><td>2000–7000</td><td>13 din</td></tr>
-<tr><td>7000+</td><td>12.2 din</td></tr>
-</table>
+  <div class="products-cards">
+    <div class="product-card reveal">
+      <div class="product-card-header">
+        <div class="product-size-badge">Standardna čačkalica</div>
+        <div class="product-name">Zastavica<br>na čačkalici</div>
+      </div>
+      <div class="product-card-body">
+        <p class="product-desc">Klasična reklamna zastavica za proslave, rođendane i ketering. Savršena za kolače, slatkiše i finger food dekoraciju.</p>
+        <div class="product-from">Cena od</div>
+        <div class="product-price">10,20 <span>din/kom</span></div>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-header">
+        <div class="product-size-badge">Štapić 9cm</div>
+        <div class="product-name">Zastavica na<br>štapiću od 9cm</div>
+      </div>
+      <div class="product-card-body">
+        <p class="product-desc">Reklamna zastavica na drvenom štapiću 9cm. Savršena za burgere i sendviče — vaš brend uvek u prvom planu.</p>
+        <div class="product-from">Cena od</div>
+        <div class="product-price">12,20 <span>din/kom</span></div>
+      </div>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-card-header">
+        <div class="product-size-badge">Štapić 20cm</div>
+        <div class="product-name">Zastavica na<br>štapiću od 20cm</div>
+      </div>
+      <div class="product-card-body">
+        <p class="product-desc">Zastavica na štapiću od 20cm za mešanje koktela. Oduševite goste elegantnim detaljom na svakoj čaši.</p>
+        <div class="product-from">Cena od</div>
+        <div class="product-price">13,40 <span>din/kom</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h3>20cm</h3>
-<table class="price-table">
-<tr><th>Količina</th><th>Cena</th></tr>
-<tr><td>500–1000</td><td>15.7 din</td></tr>
-<tr><td>1000–2000</td><td>14.7 din</td></tr>
-<tr><td>2000–7000</td><td>14.2 din</td></tr>
-<tr><td>7000+</td><td>13.4 din</td></tr>
-</table>
-</div>
+<section class="pricing" id="cene">
+  <div class="reveal">
+    <span class="section-label">Cenovnik</span>
+    <h2 class="section-title">Transparentne cene —<br><em>bez skrivenih troškova</em></h2>
+    <p class="section-body" style="margin-bottom:2rem;">Cena po komadu zavisi od naručene količine. Što više naručite — niža je cena. Cene su bez PDV-a.</p>
+  </div>
+  <div class="pricing-note reveal">
+    ⚠️ <span><strong>Napomena za tamne pozadine:</strong> Ukoliko je potrebno štampati crnu ili tamnu pozadinu, molimo vas da to napomenete u upitu — ovo utiče na tehniku štampe.</span>
+  </div>
+  <div class="pricing-tables reveal">
+    <div class="pricing-table">
+      <div class="pricing-table-header">
+        <div class="pricing-table-title">Zastavica na čačkalici</div>
+        <div class="pricing-table-sub">Standardna čačkalica</div>
+      </div>
+      <div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 500 do 1.000 kom.</span><span class="pricing-row-price">12,50 din/kom</span></div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 1.000 do 2.000 kom.</span><span class="pricing-row-price">11,50 din/kom</span></div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 2.000 do 7.000 kom.</span><span class="pricing-row-price">11,00 din/kom</span></div>
+        <div class="pricing-row best"><span class="pricing-row-qty">Preko 7.000 kom.</span><span class="pricing-row-price">10,20 din/kom</span><span class="best-tag">Najpovoljnije</span></div>
+      </div>
+    </div>
+    <div class="pricing-table">
+      <div class="pricing-table-header">
+        <div class="pricing-table-title">Zastavica na štapiću 9cm</div>
+        <div class="pricing-table-sub">Drveni štapić za burgere</div>
+      </div>
+      <div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 500 do 1.000 kom.</span><span class="pricing-row-price">14,50 din/kom</span></div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 1.000 do 2.000 kom.</span><span class="pricing-row-price">13,50 din/kom</span></div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 2.000 do 7.000 kom.</span><span class="pricing-row-price">13,00 din/kom</span></div>
+        <div class="pricing-row best"><span class="pricing-row-qty">Preko 7.000 kom.</span><span class="pricing-row-price">12,20 din/kom</span><span class="best-tag">Najpovoljnije</span></div>
+      </div>
+    </div>
+    <div class="pricing-table">
+      <div class="pricing-table-header">
+        <div class="pricing-table-title">Zastavica na štapiću 20cm</div>
+        <div class="pricing-table-sub">Štapić za mešanje koktela</div>
+      </div>
+      <div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 500 do 1.000 kom.</span><span class="pricing-row-price">15,70 din/kom</span></div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 1.000 do 2.000 kom.</span><span class="pricing-row-price">14,70 din/kom</span></div>
+        <div class="pricing-row"><span class="pricing-row-qty">Od 2.000 do 7.000 kom.</span><span class="pricing-row-price">14,20 din/kom</span></div>
+        <div class="pricing-row best"><span class="pricing-row-qty">Preko 7.000 kom.</span><span class="pricing-row-price">13,40 din/kom</span><span class="best-tag">Najpovoljnije</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="cta">
-<h2>Pozovi ili piši odmah</h2>
-<p>0637683881 (Viber / WhatsApp)</p>
-</div>
+<section class="how" id="kako">
+  <div class="reveal">
+    <span class="section-label" style="color:var(--gold-light);">Proces narudžbine</span>
+    <h2 class="section-title">Kako naručiti?</h2>
+    <p class="section-body">Jednostavan proces u 4 koraka — od vašeg upita do gotovih zastavica.</p>
+  </div>
+  <div class="steps">
+    <div class="step reveal">
+      <span class="step-num">01</span>
+      <div class="step-icon">📞</div>
+      <h3>Kontaktirajte nas</h3>
+      <p>Pozovite nas ili pišite na Viber / WhatsApp sa vašim zahtevom i željenom količinom.</p>
+    </div>
+    <div class="step reveal">
+      <span class="step-num">02</span>
+      <div class="step-icon">🎨</div>
+      <h3>Pošaljite dizajn</h3>
+      <p>Dostavite nam vaš logo ili dizajn. Napomenite ukoliko imate tamnu ili crnu pozadinu.</p>
+    </div>
+    <div class="step reveal">
+      <span class="step-num">03</span>
+      <div class="step-icon">✅</div>
+      <h3>Odobrite ponudu</h3>
+      <p>Dobijate konkretnu ponudu sa cenom i rokovima. Potvrdite narudžbinu i mi krećemo u posao.</p>
+    </div>
+    <div class="step reveal">
+      <span class="step-num">04</span>
+      <div class="step-icon">🚚</div>
+      <h3>Isporuka</h3>
+      <p>Vaše zastavice su gotove i isporučuju se direktno na vašu adresu.</p>
+    </div>
+  </div>
+</section>
 
-<a class="sticky" href="tel:0637683881">Pozovi</a>
+<section class="notice">
+  <div class="reveal">
+    <span class="section-label">Važna napomena</span>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">Pre nego što naručite</h2>
+  </div>
+  <div class="notice-box reveal">
+    <strong>⚠️ Ukoliko je potrebno štampati crnu ili tamnu pozadinu — obavezno nas obavestite u upitu.</strong> Ova informacija je neophodna za izbor prave tehnike štampe i formiranje tačne cene.<br><br>
+    Minimalna narudžbina je <strong>500 komada</strong>. Svi štapići su sterilni i potpuno bezbedni za kontakt sa hranom i pićem. Zastavice se izrađuju isključivo po vašem dizajnu — sa vašim logotipom ili logotipom vašeg klijenta.
+  </div>
+</section>
 
+<section class="contact" id="kontakt">
+  <div class="reveal">
+    <span class="section-label" style="color:var(--gold-light);">Kontaktirajte nas</span>
+    <h2 class="section-title">Pošaljite upit danas</h2>
+    <p class="section-body">Odgovaramo brzo sa konkretnom ponudom. Dostupni smo putem telefona, Viber-a, WhatsApp-a i emaila.</p>
+  </div>
+  <div class="contact-cards reveal">
+    <a href="tel:0637683881" class="contact-card">
+      <span class="contact-card-icon">📞</span>
+      <div class="contact-card-label">Telefon</div>
+      <div class="contact-card-value">063 7683 881</div>
+    </a>
+    <a href="viber://chat?number=+381637683881" class="contact-card">
+      <span class="contact-card-icon">💜</span>
+      <div class="contact-card-label">Viber</div>
+      <div class="contact-card-value">063 7683 881</div>
+    </a>
+    <a href="https://wa.me/381637683881" class="contact-card" target="_blank" rel="noopener">
+      <span class="contact-card-icon">💬</span>
+      <div class="contact-card-label">WhatsApp</div>
+      <div class="contact-card-value">063 7683 881</div>
+    </a>
+  </div>
+  <a href="mailto:ponuda@zastavice-za-ketering.com.in.rs" class="btn-primary reveal" style="margin:0 auto;display:inline-flex;">
+    📧 Pošaljite email
+  </a>
+  <p class="contact-hint reveal" style="margin-top:1.5rem;">Napišite nam: vrstu štapića, količinu i da li imate tamnu pozadinu za štampu.</p>
+</section>
+
+<footer>
+  <div class="footer-logo">Zastavice za Ketering</div>
+  <p>© 2026 zastavice-za-ketering.com.in.rs · Sva prava zadržana</p>
+  <p>Min. narudžbina: 500 kom · Obostrana kolorna štampa · Sterilni štapići</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
